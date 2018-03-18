@@ -1,0 +1,329 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://knight.gd" type="Script" id=1]
+[ext_resource path="res://knight.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "idle"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -68 ), Vector2( 0, -64.0309 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("head:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("shield:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("shield:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("foot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 47.5855 ), Vector2( 0, 47.5855 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("foot:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("head/hair:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 44.853, -27.2805 ), Vector2( 44.853, -27.2805 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("head/hair:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 2.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("head/head_front:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("head/head_front:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "raise_shield"
+length = 0.45
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -68 ), Vector2( 0, -55 ), Vector2( 0, -55 ), Vector2( 0, -68 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("head:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("shield:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -5 ), Vector2( 0, -5 ), Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("shield:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("foot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 47.5855 ), Vector2( 0, 47.5855 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("foot:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("head/hair:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 44.853, -27.2805 ), Vector2( 44.853, -27.2805 ), Vector2( 44.853, -27.2805 ), Vector2( 44.853, -27.2805 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("head/hair:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -54.3154, -54.3154, 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("shield:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.45, 1.45 ), Vector2( 1.15, 1.15 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+position = Vector2( 343.766, 163.289 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="foot" type="Sprite" parent="." index="0"]
+
+modulate = Color( 0.378906, 0.350784, 0.350784, 1 )
+position = Vector2( 0, 47.5855 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 20, 85, 70, 30 )
+region_filter_clip = true
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="head" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 0, -68 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="hair" type="Sprite" parent="head" index="0"]
+
+modulate = Color( 0.192157, 0.235294, 0.862745, 1 )
+position = Vector2( 44.853, -27.2805 )
+texture = ExtResource( 2 )
+offset = Vector2( 30, 0 )
+region_enabled = true
+region_rect = Rect2( 5, 10, 70, 55 )
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="knight_back" type="Sprite" parent="head" index="1"]
+
+modulate = Color( 0.378906, 0.350784, 0.350784, 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 275, 5, 120, 100 )
+_sections_unfolded = [ "Material", "Region", "Visibility" ]
+
+[node name="head_front" type="Sprite" parent="head" index="2"]
+
+modulate = Color( 0.376471, 0.34902, 0.34902, 1 )
+position = Vector2( 0, -0.8 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 255, 130, 140, 60 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="shield" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="shield_back" type="Sprite" parent="shield" index="0"]
+
+modulate = Color( 0.378906, 0.350784, 0.350784, 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 95, 5, 170, 105 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="shield_front" type="Sprite" parent="shield" index="1"]
+
+modulate = Color( 0.195587, 0.237318, 0.863281, 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 20, 130, 110, 65 )
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = "idle"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/idle = SubResource( 1 )
+anims/raise_shield = SubResource( 2 )
+blend_times = [  ]
+
+

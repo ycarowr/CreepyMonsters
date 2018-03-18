@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://PlayerKinematic.gd" type="Script" id=1]
+[ext_resource path="res://knight.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 16.0099
+height = 53.665
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 74.7733
+
+[node name="Player" type="KinematicBody2D"]
+
+position = Vector2( 497.789, 291.233 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Pickable", "Transform", "collision" ]
+
+[node name="Node2D" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 0, 22 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0.397186, 7.14984 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StunArea" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StunArea" index="0"]
+
+position = Vector2( -1.04547, -2.59705 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="body_entered" from="StunArea" to="." method="_on_StunArea_body_entered"]
+
+

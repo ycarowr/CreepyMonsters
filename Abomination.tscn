@@ -1,0 +1,192 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Abomination.gd" type="Script" id=1]
+[ext_resource path="res://abomination_shape_0.png" type="Texture" id=2]
+[ext_resource path="res://abomination_shape_3.png" type="Texture" id=3]
+[ext_resource path="res://abomination_shape_4.png" type="Texture" id=4]
+[ext_resource path="res://abomination_shape_1.png" type="Texture" id=5]
+[ext_resource path="res://abomination_shape_2.png" type="Texture" id=6]
+[ext_resource path="res://Eye.tscn" type="PackedScene" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Shake",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 39.4904
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "idle"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("eyes_up:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 2.65, -6 ), Vector2( 2.65, -3 ), Vector2( 2.65, 0 ), Vector2( 2.65, -3 ), Vector2( 2.65, -6 ) ]
+}
+
+[node name="Abomination" type="RigidBody2D" groups=[
+"abomination",
+"solid",
+]]
+
+position = Vector2( 464.261, 280.365 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 2
+mass = 150.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 12.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = 0.1
+angular_velocity = 0.0
+angular_damp = 1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Pickable", "Transform", "collision" ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+modulate = Color( 0.914063, 0.149963, 0.149963, 1 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "Idle"
+frame = 2
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" groups=[
+"abomination",
+"solid",
+]]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="eyes_up" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 2.65, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Eye" parent="eyes_up" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( -18.1474, -25.0212 )
+rotation = -0.332551
+frame = 3
+
+[node name="Eye11" parent="eyes_up" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( -30.7454, -6.48938 )
+rotation = -0.332551
+frame = 3
+
+[node name="Eye4" parent="eyes_up" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 16.1324, -22.3061 )
+rotation = 0.310195
+frame = 3
+
+[node name="Eye5" parent="eyes_up" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 26.9038, -2.82315 )
+rotation = 0.159214
+frame = 2
+
+[node name="Eye6" parent="eyes_up" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( -9.85434, -6.36377 )
+rotation = -0.144529
+frame = 2
+
+[node name="eyes_down" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Eye2" parent="eyes_down" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( -32.0592, 7.94293 )
+rotation = -0.334694
+frame = 3
+
+[node name="Eye3" parent="eyes_down" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 17.4786, 30.6012 )
+rotation = 0.0216652
+
+[node name="Eye9" parent="eyes_down" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 31.9181, 14.5844 )
+rotation = 0.0216652
+frame = 3
+
+[node name="Eye10" parent="eyes_down" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( -23.4197, 25.2667 )
+rotation = 0.0216652
+frame = 3
+
+[node name="Eye7" parent="eyes_down" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( -10.5541, 12.6325 )
+rotation = 0.14333
+frame = 3
+
+[node name="Eye8" parent="eyes_down" index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 15.0173, 5.57532 )
+rotation = 0.17474
+frame = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+
+root_node = NodePath("..")
+autoplay = "idle"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/idle = SubResource( 2 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+

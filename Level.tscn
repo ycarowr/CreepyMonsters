@@ -1,0 +1,210 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Level.gd" type="Script" id=1]
+[ext_resource path="res://Brick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TimerSpawn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+
+[node name="Level_0" type="Node2D" index="0"]
+
+position = Vector2( 480, 337 )
+script = ExtResource( 1 )
+
+[node name="Platform_0" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( -38, -31 )
+
+[node name="Brick13" parent="Platform_0" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( -310, -152 )
+
+[node name="Brick14" parent="Platform_0" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -256, -152 )
+
+[node name="Brick12" parent="Platform_0" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( -364, -152 )
+
+[node name="Platform_1" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 354, 85 )
+
+[node name="Brick13" parent="Platform_1" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( -314, -150 )
+
+[node name="Brick18" parent="Platform_1" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -368, -150 )
+
+[node name="Brick14" parent="Platform_1" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( -260, -150 )
+
+[node name="Brick16" parent="Platform_1" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( -206, -150 )
+
+[node name="Platform_7" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 326, 323 )
+
+[node name="Brick17" parent="Platform_7" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( -258, -182 )
+
+[node name="Platform_2" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 636, -127 )
+
+[node name="Brick13" parent="Platform_2" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( -320, -150 )
+
+[node name="Brick14" parent="Platform_2" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -266, -150 )
+
+[node name="Brick12" parent="Platform_2" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( -374, -150 )
+
+[node name="Platform_3" type="Node2D" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 506, 385 )
+
+[node name="Brick13" parent="Platform_3" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( -308, -150 )
+
+[node name="Brick14" parent="Platform_3" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -254, -150 )
+
+[node name="Brick12" parent="Platform_3" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( -38, -150 )
+
+[node name="Brick18" parent="Platform_3" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 8, -196 )
+
+[node name="Brick15" parent="Platform_3" index="4" instance=ExtResource( 2 )]
+
+position = Vector2( -200, -150 )
+
+[node name="Brick16" parent="Platform_3" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( -146, -150 )
+
+[node name="Brick17" parent="Platform_3" index="6" instance=ExtResource( 2 )]
+
+position = Vector2( -92, -150 )
+
+[node name="Platform_4" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 104, 383 )
+
+[node name="Brick13" parent="Platform_4" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( -326, -150 )
+
+[node name="Brick19" parent="Platform_4" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -488, -150 )
+
+[node name="Brick21" parent="Platform_4" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( -534, -196 )
+
+[node name="Brick14" parent="Platform_4" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( -272, -150 )
+
+[node name="Brick20" parent="Platform_4" index="4" instance=ExtResource( 2 )]
+
+position = Vector2( -434, -150 )
+
+[node name="Brick12" parent="Platform_4" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( -380, -150 )
+
+[node name="Brick15" parent="Platform_4" index="6" instance=ExtResource( 2 )]
+
+position = Vector2( -218, -150 )
+
+[node name="Brick17" parent="Platform_4" index="7" instance=ExtResource( 2 )]
+
+position = Vector2( -164, -150 )
+
+[node name="Platform_5" type="Node2D" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( -184, 173 )
+
+[node name="Brick13" parent="Platform_5" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( -320, -150 )
+
+[node name="Brick14" parent="Platform_5" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -266, -150 )
+
+[node name="Brick12" parent="Platform_5" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( -374, -150 )
+
+[node name="Brick15" parent="Platform_5" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( -422, -198 )
+
+[node name="Platform_6" type="Node2D" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 890, 89 )
+
+[node name="Brick13" parent="Platform_6" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( -320, -150 )
+
+[node name="Brick14" parent="Platform_6" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -266, -150 )
+
+[node name="Brick15" parent="Platform_6" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( -220, -200 )
+
+[node name="Brick12" parent="Platform_6" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( -374, -150 )
+
+[node name="Node2D" parent="Platform_6" index="4" instance=ExtResource( 3 )]
+
+[node name="Player" parent="." index="8" instance=ExtResource( 4 )]
+
+position = Vector2( 506, -145 )
+
+[node name="PositionSpawn_0" parent="." index="9" instance=ExtResource( 3 )]
+
+position = Vector2( -382, -387 )
+timer = 3.0
+
+[node name="PositionSpawn_2" parent="." index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 318, -383 )
+_sections_unfolded = [ "Pause" ]
+timer = 2.0
+
+[connection signal="create_creature" from="PositionSpawn_0" to="." method="_on_PositionSpawn_create_creature"]
+
+[connection signal="create_creature" from="PositionSpawn_2" to="." method="_on_PositionSpawn_create_creature"]
+
+

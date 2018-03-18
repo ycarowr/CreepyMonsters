@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://TimerSpawn.gd" type="Script" id=1]
+[ext_resource path="res://Abomination.tscn" type="PackedScene" id=2]
+
+[node name="Spammer" type="Node2D"]
+
+script = ExtResource( 1 )
+Abomination = ExtResource( 2 )
+timer = 3.0
+
+[node name="PositionSpawn" type="Node2D" parent="." index="0"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Timer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+
